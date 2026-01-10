@@ -39,6 +39,8 @@ export interface Issue {
 }
 
 export interface Project {
+  id: string;
+  name: string;
   issues: Issue[];
   characters: Character[];
   activeIssueId: string;
