@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-700: #2a2a35;
+  --color-ink-800: #1e1e26;
+  --color-ink-900: #16161c;
+  --color-ink-950: #0e0e12;
+  --color-ember-400: #ff8a4c;
+  --color-ember-500: #ff6b35;
+  --color-steel-100: #f0f0f5;
+  --color-steel-200: #d8d8e0;
+  --color-steel-300: #b8b8c5;
+  --color-steel-400: #9898a8;
+  --color-steel-500: #78788c;
+  --color-steel-600: #585868;
+  --color-steel-700: #404050;
+  --font-family-display: Georgia, serif;
+  --font-family-mono: Consolas, monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a35 transparent;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.comic-overlay-base {
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: move;
+  user-select: none;
+  font-family: 'Comic Sans MS', 'Chalkboard', sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 100;
+}
+
+.bubble-dialogue {
+  background: white;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px black;
+}
+
+.bubble-thought {
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0px black;
+}
+
+.bubble-caption {
+  background: #fffacd;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-style: italic;
+  box-shadow: 2px 2px 0px black;
+}
+
+.bubble-phone {
+  background: #e0e0e0;
+  border: 2px dashed black;
+  border-radius: 8px;
+}
+
+.element-selected {
+  outline: 2px solid #ff6b35;
+  outline-offset: 2px;
+}
